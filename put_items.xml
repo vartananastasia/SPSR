@@ -1,0 +1,15 @@
+<Command id="PutItems" Login="" Password="">
+    <Items>
+        <Item>
+            <Id></Id>
+            <Article></Article>
+            <Name></Name>
+            <Fullname></Fullname>
+            <Barcodes>
+                <Barcode>
+                    <Code></Code>
+                </Barcode>
+            </Barcodes>
+        </Item>
+    </Items>
+</Command>

@@ -1,0 +1,16 @@
+<Command Id="PurchaseOrder" Login="" Password="">
+    <Documents>
+        <Document>
+            <ID></ID>
+            <Date></Date>
+            <DateOfDelivery></DateOfDelivery>
+            <Items>
+                <Item>
+                    <ID></ID>
+                    <Quantity></Quantity>
+                    <Price></Price>
+                </Item>
+            </Items>
+        </Document>
+    </Documents>
+</Command>
