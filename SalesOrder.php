@@ -23,7 +23,7 @@ class SalesOrder extends SPSRMethod
      * @throws SPSR_Exception
      */
     public function __construct(array $fields = [
-        'id' => '1',
+        'id' => '232456432',
         'date' => '2010-10-10',
         'total_sum' => '411',
         'sum_of_delivery' => '400',
@@ -34,13 +34,14 @@ class SalesOrder extends SPSRMethod
         'city' => 'test city',
         'street' => 'test street',
         'phone' => '79000000000',
+        'consumer_id' => '622',
         'items' => [
             ['id' => 1, 'quantity' => 1, 'price' => 11, 'VAT' => 0, 'vat_sum' => 0, 'total_without_vat' => 11,
                 'total_with_vat' => 11, 'cancel_item' => 'false']
         ]
     ])
     {
-        $keys = ['id', 'date', 'total_sum', 'sum_of_delivery', 'full_address', 'postcode', 'phone', 'items'];
+        $keys = ['id', 'date', 'total_sum', 'sum_of_delivery', 'full_address', 'postcode', 'phone', 'items', 'consumer_id'];
         $item_keys = ['id', 'quantity', 'price'];
 
         if (self::CheckFields($fields, $keys, $item_keys)) {
@@ -57,6 +58,7 @@ class SalesOrder extends SPSRMethod
             $body->Orders->Order->Document->DeliveryInformation->City = $fields["city"];
             $body->Orders->Order->Document->DeliveryInformation->Street = $fields["street"];
             $body->Orders->Order->Document->DeliveryInformation->Phone = $fields["phone"];
+            $body->Orders->Order->Document->ConsumerID = $fields["consumer_id"];
 
             if (count($fields["items"]) > 0) {
                 unset($body->Orders->Order->Items->Item[0]);

@@ -3,6 +3,7 @@
 namespace SPSR;
 
 use GuzzleHttp\Client as GC;
+use Symfony\Component\DependencyInjection\SimpleXMLElement;
 
 
 /**
@@ -46,6 +47,7 @@ class Client
     const FILE_SALES_ORDER = __DIR__ . '/SPSR/sales_order.xml';
     const FILE_PURCHASE_ORDER = __DIR__ . '/SPSR/purchase_order.xml';
     const FILE_STOCK_REPORT = __DIR__ . '/SPSR/stock_report.xml';
+    const FILE_PUT_CONTRACTORS = __DIR__ . '/SPSR/put_contractors.xml';
 
 
     /**
@@ -85,9 +87,10 @@ class Client
 
         gg($body);
 
-//        $client = new GC();
-//        $response = $client->request('POST', $url, ['body' => $body]);
-//        $data = $response->getBody();
-//        return $data;
+        $client = new GC();
+        $response = $client->request('POST', $url, ['body' => $body->asXML()]);
+        $data = $response->getBody();
+        echo $data;
+//        $request = new \SimpleXMLElement($data);
     }
 }

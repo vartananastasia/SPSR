@@ -8,8 +8,9 @@ Uses:
 
 1) Download all goods in store by ```PutItems```
 2) Add quantity for goods by ```PurchaseOrder```
-3) Now orders can be sent to SPSR by ```SalesOrder```
-4) Check quantity of goods in store by ```StockReport```
+3) Add contractor for new order by ```PutContractors```
+4) Now orders can be sent to SPSR by ```SalesOrder```
+5) Check quantity of goods in store by ```StockReport```
 
 Use real:
 
@@ -17,6 +18,7 @@ Use real:
 $client = new SPSR\Client('login', 'password');
 # $s = new SPSR\PutItems($fields);
 # $s = new SPSR\PurchaseOrder($fields);
+# $s = new SPSR\PutContractor($fields);
 $s = new SPSR\SalesOrder($fields);
 # $s = new SPSR\StockReport($fields);
 $client->Execute($s->GetBody());
@@ -28,6 +30,7 @@ Use test:
 $client = new SPSR\Client('', '', True);
 # $s = new SPSR\PutItems($fields);
 # $s = new SPSR\PurchaseOrder($fields);
+# $s = new SPSR\PutContractor($fields);
 $s = new SPSR\SalesOrder($fields);
 # $s = new SPSR\StockReport($fields);
 $client->Execute($s->GetBody());

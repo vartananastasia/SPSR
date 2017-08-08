@@ -23,9 +23,9 @@ class PurchaseOrder extends SPSRMethod
      * @throws SPSR_Exception
      */
     public function __construct(array $fields = [
-        'id' => '1',
+        'id' => '6876979',
         'date' => '2010-10-10',
-        'date_of_delivery' => '2020-10-10',
+        'date_of_delivery' => '2010-10-10',
         'items' => [
             ['id' => 1, 'quantity' => 2, 'price' => 400]
         ]

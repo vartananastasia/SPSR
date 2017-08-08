@@ -14,7 +14,7 @@ class StockReport extends SPSRMethod
     /**
      * @var \SimpleXMLElement
      */
-    private $body;
+    protected $body;
 
 
     /**
@@ -23,7 +23,7 @@ class StockReport extends SPSRMethod
      * @throws SPSR_Exception
      */
     public function __construct(array $fields = [
-        'report_date' => '2010-10-10',
+        'report_date' => '2017-08-08',
     ])
     {
         $keys = ['report_date'];

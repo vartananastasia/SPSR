@@ -14,7 +14,7 @@ class PutItems extends SPSRMethod
     /**
      * @var \SimpleXMLElement
      */
-    private $body;
+    protected $body;
 
 
     /**
@@ -28,11 +28,11 @@ class PutItems extends SPSRMethod
         'name' => 'test good',
         'fullname' => 'test good 1',
         'barcodes' => [
-            '1', '2', '3'
+            '33432453678765432'
         ]
     ])
     {
-        $keys = ['id', 'name', 'fullname'];
+        $keys = ['id', 'name', 'fullname', 'barcodes'];
 
         if (self::CheckFields($fields, $keys)) {
             $body = new \SimpleXMLElement(file_get_contents(Client::FILE_PUT_ITEMS));

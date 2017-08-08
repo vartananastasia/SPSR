@@ -1,0 +1,14 @@
+<Command id="PutContractors" Login="" Password="">
+    <Contractors>
+        <Contractor>
+            <Id></Id>
+            <Name></Name>
+            <Fullname></Fullname>
+            <INN>0</INN>
+            <KPP>0</KPP>
+            <Type>2</Type>
+            <LegalAddr></LegalAddr>
+            <ActualAddr></ActualAddr>
+        </Contractor>
+    </Contractors>
+</Command>
