@@ -26,8 +26,13 @@ abstract class SPSRMethod
         $correct_arr = True;
 
         foreach ($keys as $key) {
-            if (!array_key_exists($key, $fields))
+            if (!array_key_exists($key, $fields)) {
                 $correct_arr = False;
+                break;
+            }
+            if (substr_count($key, 'date')) {
+                self::DateValidate($fields[$key]);
+            }
         }
 
         # if items in array
@@ -37,6 +42,9 @@ abstract class SPSRMethod
                     if (!array_key_exists($item_key, $item)) {
                         $correct_arr = False;
                         break;
+                    }
+                    if (substr_count($item_key, 'date')) {
+                        self::DateValidate($item[$item_key]);
                     }
                 }
             }
@@ -51,5 +59,16 @@ abstract class SPSRMethod
     public function GetBody()
     {
         return $this->body;
+    }
+
+
+    /**
+     * @param $date
+     * @throws SPSR_Exception
+     */
+    private function DateValidate($date)
+    {
+        if (!preg_match('/[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])/', $date))
+            throw new SPSR_Exception(SPSR_Exception::INCORRECT_DATE);
     }
 }

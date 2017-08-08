@@ -20,7 +20,7 @@ class PutItems extends SPSRMethod
     /**
      * PutItems constructor.
      * @param array $fields
-     * @throws SPSRException
+     * @throws SPSR_Exception
      */
     public function __construct(array $fields = [
         'id' => '1',
@@ -51,7 +51,7 @@ class PutItems extends SPSRMethod
             }
             $this->body = $body;
         } else {
-            throw new SPSRException(SPSRException::KEY_NOT_IN_ARRAY);
+            throw new SPSR_Exception(SPSR_Exception::KEY_NOT_IN_ARRAY);
         }
     }
 }

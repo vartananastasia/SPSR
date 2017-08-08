@@ -20,7 +20,7 @@ class StockReport extends SPSRMethod
     /**
      * StockReport constructor.
      * @param array $fields
-     * @throws SPSRException
+     * @throws SPSR_Exception
      */
     public function __construct(array $fields = [
         'report_date' => '2010-10-10',
@@ -34,6 +34,6 @@ class StockReport extends SPSRMethod
             $body->ReportDate = $fields["report_date"];
             $this->body = $body;
         } else
-            throw new SPSRException(SPSRException::KEY_NOT_IN_ARRAY);
+            throw new SPSR_Exception(SPSR_Exception::KEY_NOT_IN_ARRAY);
     }
 }
