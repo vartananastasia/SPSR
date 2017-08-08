@@ -3,7 +3,6 @@
 namespace SPSR;
 
 use GuzzleHttp\Client as GC;
-use Symfony\Component\DependencyInjection\SimpleXMLElement;
 
 
 /**
