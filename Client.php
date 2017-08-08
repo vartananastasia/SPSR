@@ -42,10 +42,10 @@ class Client
     const STOCK_REPORT = 'StockReport';
 
     # xml file names
-    const FILE_PUT_ITEMS = __DIR__ . '/put_items.xml';
-    const FILE_SALES_ORDER = __DIR__ . '/sales_order.xml';
-    const FILE_PURCHASE_ORDER = __DIR__ . '/purchase_order.xml';
-    const FILE_STOCK_REPORT = __DIR__ . '/stock_report.xml';
+    const FILE_PUT_ITEMS = __DIR__ . '/SPSR/put_items.xml';
+    const FILE_SALES_ORDER = __DIR__ . '/SPSR/sales_order.xml';
+    const FILE_PURCHASE_ORDER = __DIR__ . '/SPSR/purchase_order.xml';
+    const FILE_STOCK_REPORT = __DIR__ . '/SPSR/stock_report.xml';
 
 
     /**
