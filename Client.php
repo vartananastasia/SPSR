@@ -84,12 +84,9 @@ class Client
         $body->attributes()["Login"] = $this->login;
         $body->attributes()["Password"] = $this->password;
 
-        gg($body);
-
         $client = new GC();
         $response = $client->request('POST', $url, ['body' => $body->asXML()]);
         $data = $response->getBody();
-        echo $data;
-//        $request = new \SimpleXMLElement($data);
+        return $data;
     }
 }
